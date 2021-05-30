@@ -1,8 +1,7 @@
 name: chicaga-test-on-schedule
 on:
-  push:
-    branches:
-    - main
+  schedule:
+    - cron:  '0 20 * * *'
 
 jobs:
   build:
@@ -33,6 +32,5 @@ jobs:
           password: ${{secrets.EMAIL_PASSWORD}}
           subject: Автотесты сайта завершились с ошибкой
           body: Возможно требуется проверка работоспособности сайта
-          to: dba.knight@gmail.com
-          # ,n.davydova@chicaga.ru
+          to: dba.knight@gmail.com,n.davydova@chicaga.ru
           from: Сайт chicaga.ru
