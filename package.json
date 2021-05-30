@@ -2,7 +2,7 @@
   "author": "Alexander Prodan",
   "dependencies": {
     "chromedriver": "*",
-    "jest": "*",
+    "jest": "^26.*",
     "playwright": "*"
   },
   "description": "Chicaga test with Jest and Expect.",
