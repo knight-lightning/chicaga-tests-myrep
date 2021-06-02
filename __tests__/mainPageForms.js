@@ -17,7 +17,7 @@ describe('Главная страница - заполение формы', () =
         browser = await { chromium, webkit, firefox }[browserName].launch({
             headless: headfullBrowserState,
             args: ['--disable-dev-shm-usage'],
-            slowMo: 400
+            // slowMo: 400
         })
         context = await browser.newContext({
             viewport: { width: 1920, height: 1080 }
@@ -119,14 +119,15 @@ describe('Главная страница - заполение формы', () =
         await page.waitForSelector('text=https://chicaga.ru/edu/')
         screen = await page.screenshot({ path: `screens/${today}-mainPageFormPayFromHead-${browserName}.png` })
         reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
-        await page.click('.link_arrow_left')
-        await page.click('#unSuccessPayModal [aria-label="Close"]')
+        // await page.click('.MuiLink-underlineNone')
+        // await page.click('#unSuccessPayModal [aria-label="Close"]')
     })
 
     test('попап Оплата из футера', async () => {
         feature = 'Попап Оплата из футера'
         description = 'Попап Оплата из футера с заполнением формы и редиректом на платёжную систему'
 
+        await page.goto('https://chicaga.ru/?is_test_mode=true')
         // Жмём в шапке для вызова попапа
         await page.click('button:has-text("Оплатить")')
 
@@ -143,8 +144,8 @@ describe('Главная страница - заполение формы', () =
         await page.waitForSelector('text=https://chicaga.ru/edu/')
         screen = await page.screenshot({ path: `screens/${today}-mainPageFormPayFromFooter-${browserName}.png` })
         reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
-        await page.click('.link_arrow_left')
-        await page.click('#unSuccessPayModal [aria-label="Close"]')
+        // await page.click('.MuiLink-underlineNone')
+        // await page.click('#unSuccessPayModal [aria-label="Close"]')
     })
 
     test('Тест плагина с якорями', async () => {
