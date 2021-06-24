@@ -78,26 +78,26 @@ describe('Главная страница - заполение формы', () =
         reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
     })
 
-    test('Форма Хочу выиграть курс', async () => {
-        feature = 'Форма Хочу выигрвать курс'
-        description = 'Форма Хочу выигрвать курс'
+    // test('Форма Хочу выиграть курс', async () => {
+    //     feature = 'Форма Хочу выигрвать курс'
+    //     description = 'Форма Хочу выигрвать курс'
 
-        await page.click('text=Хочу выиграть курс')
+    //     await page.click('text=Хочу выиграть курс')
 
-        await page.fill('[placeholder="Имя"]', 'tetst')
-        await page.fill('[placeholder="Телефон"]', '831222222')
-        await page.selectOption('#exampleModal select[name="school"]', 'Онлайн-обучение');
-        await page.click('text=Отправить')
+    //     await page.fill('[placeholder="Имя"]', 'tetst')
+    //     await page.fill('[placeholder="Телефон"]', '831222222')
+    //     await page.selectOption('#exampleModal select[name="school"]', 'Онлайн-обучение');
+    //     await page.click('text=Отправить')
 
-        // Проверяем
-        // // const content = await page.textContent('text="Номенклатура"')
-        // await page.waitForSelector('text=Спасибо, ваша заявка успешно отправлена!')
-        // expect(await page.textContent('text=Спасибо, ваша заявка успешно отправлена!')).toBe('Спасибо, ваша заявка успешно отправлена!')
+    //     // Проверяем
+    //     // // const content = await page.textContent('text="Номенклатура"')
+    //     // await page.waitForSelector('text=Спасибо, ваша заявка успешно отправлена!')
+    //     // expect(await page.textContent('text=Спасибо, ваша заявка успешно отправлена!')).toBe('Спасибо, ваша заявка успешно отправлена!')
 
-        const screen = await page.screenshot({ path: `screens/${today}-mainPageForm-${browserName}.png` })
-        reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
-		await page.click('#exampleModal [aria-label="Close"]')
-    })
+    //     const screen = await page.screenshot({ path: `screens/${today}-mainPageForm-${browserName}.png` })
+    //     reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
+	// 	await page.click('#exampleModal [aria-label="Close"]')
+    // })
 
     test('попап Оплата из шапки', async () => {
         feature = 'Попап Оплата из шапки'

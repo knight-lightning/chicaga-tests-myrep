@@ -143,18 +143,17 @@ describe('Главная страница - заполение формы', () =
         reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
     })
 
-    test('Видео Разыгрываем один миллион', async () => {
-        feature = 'Видео Разыгрываем один миллион'
-        description = 'Видео Разыгрываем один миллион'
+    // test('Видео Разыгрываем один миллион', async () => {
+    //     feature = 'Видео Разыгрываем один миллион'
+    //     description = 'Видео Разыгрываем один миллион'
 
-        //
-        await page.click('.raffle-start-btn')
-        await page.keyboard.press('Escape')
-        // Проверяем
-        screen = await page.screenshot({ path: `screens/${today}-mobileOneMiilionVideo-${browserName}.png` })
-        reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
-
-    })
+    //     //
+    //     await page.click('.raffle-start-btn')
+    //     await page.keyboard.press('Escape')
+    //     // Проверяем
+    //     screen = await page.screenshot({ path: `screens/${today}-mobileOneMiilionVideo-${browserName}.png` })
+    //     reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
+    // })
 
     test('вызов видео в advantages', async () => {
         feature = 'Вызов видео в advantages'

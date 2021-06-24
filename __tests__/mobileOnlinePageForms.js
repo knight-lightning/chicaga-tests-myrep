@@ -60,26 +60,26 @@ describe('Главная страница - заполение формы', () =
         await page.click('.popup-btn__closed span')
     })
 
-    test('Мобильная форма Хочу выйграть курс', async () => {
-        feature = 'Форма Хочу выйграть курс'
-        description = 'Форма Хочу выйграть курс'
+    // test('Мобильная форма Хочу выйграть курс', async () => {
+    //     feature = 'Форма Хочу выйграть курс'
+    //     description = 'Форма Хочу выйграть курс'
 
-        // Вызываем форму
-        await page.click('text=Хочу выиграть курс')
-        // Заполняем форму
-        await page.click('.popup__london .popup__form-group div div .new-select')
-        await page.click('.popup__london span:has-text("Online школа")')
-        await page.fill('.popup__london [placeholder="Ваше имя"]', 'test')
-        await page.fill('.popup__london [placeholder="Номер телефона"]', '2')
-        // Отправляем
-        // await page.click(':nth-match(button:has-text("Отправить"), 2)')
+    //     // Вызываем форму
+    //     await page.click('text=Хочу выиграть курс')
+    //     // Заполняем форму
+    //     await page.click('.popup__london .popup__form-group div div .new-select')
+    //     await page.click('.popup__london span:has-text("Online школа")')
+    //     await page.fill('.popup__london [placeholder="Ваше имя"]', 'test')
+    //     await page.fill('.popup__london [placeholder="Номер телефона"]', '2')
+    //     // Отправляем
+    //     // await page.click(':nth-match(button:has-text("Отправить"), 2)')
 
-        // Проверяем
-        screen = await page.screenshot({ path: `screens/${today}-mobileFreeCourseForm-${browserName}.png` })
-        reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
+    //     // Проверяем
+    //     screen = await page.screenshot({ path: `screens/${today}-mobileFreeCourseForm-${browserName}.png` })
+    //     reporter.addAttachment(`${browserName}-Screenshot`, screen, "image/png")
 
-        await page.click('.popup__london  .popup-btn__closed span')
-    })
+    //     await page.click('.popup__london  .popup-btn__closed span')
+    // })
 
     test('Мобильная форма в футере Задать вопрос', async () => {
         feature = 'Форма Задать вопрос'
