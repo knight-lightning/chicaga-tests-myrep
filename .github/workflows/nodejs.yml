@@ -32,5 +32,5 @@ jobs:
           password: ${{secrets.EMAIL_PASSWORD}}
           subject: Автотесты сайта завершились с ошибкой
           body: Возможно требуется проверка работоспособности сайта
-          to: dba.knight@gmail.com,n.davydova@chicaga.ru
+          to: dba.knight@gmail.com,n.davydova@chicaga.ru,147rawil147@gmail.com
           from: Сайт chicaga.ru
