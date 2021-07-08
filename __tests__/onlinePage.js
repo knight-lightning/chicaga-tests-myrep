@@ -23,7 +23,7 @@ describe('Главная страница - заполение формы', () =
             viewport: { width: 1920, height: 1080 }
         })
         page = await context.newPage()
-        await page.goto('https://chicaga.ru/on-line/#contacts')
+        await page.goto('https://chicaga.ru/on-line/')
     })
 
     afterAll(async () => {
