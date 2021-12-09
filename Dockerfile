@@ -34,4 +34,4 @@ RUN chmod -R 777 /tests
 # Запускаем тесты
 # RUN sh testRun.sh
 
-EXPOSE 9000
+EXPOSE 9001
